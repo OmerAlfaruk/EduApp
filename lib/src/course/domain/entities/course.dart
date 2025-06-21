@@ -20,6 +20,7 @@ class Course extends Equatable {
     title: '_empty.title',
     description: '_empty.description',
     numberOfExams: 0,
+    imageIsFile: false,
     numberOfMaterials: 0,
     numberOfVideos: 0,
     groupId: '_empty.groupId',

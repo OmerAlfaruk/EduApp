@@ -14,5 +14,6 @@
   },
   "numberOfVideos": 0,
   "numberOfExams": 0,
+  "imageIsFile": false,
   "numberOfMaterials": 0
 }

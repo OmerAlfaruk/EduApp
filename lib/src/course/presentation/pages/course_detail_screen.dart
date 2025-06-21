@@ -3,6 +3,7 @@ import 'package:education_app/core/common/widgets/course_info_tile.dart';
 import 'package:education_app/core/common/widgets/expandable_text.dart';
 import 'package:education_app/core/common/widgets/gradient_background.dart';
 import 'package:education_app/core/extensions/context_extension.dart';
+import 'package:education_app/core/extensions/int_extension.dart';
 import 'package:education_app/core/res/media_res.dart';
 import 'package:education_app/src/course/data/models/course_model.dart';
 import 'package:education_app/src/course/domain/entities/course.dart';
@@ -17,7 +18,7 @@ class CourseDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final course = (this.course as CourseModel).copyWith(numberOfVideos: 3);
+    final course = (this.course as CourseModel).copyWith(numberOfVideos: 3,numberOfMaterials: 20,numberOfExams: 10);
     return Scaffold(
       backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
@@ -83,12 +84,33 @@ class CourseDetailScreen extends StatelessWidget {
                       ),
                     ],
                     if (course.numberOfMaterials > 0) ...[
-                      Text('Materials: ${course.numberOfMaterials}'),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      CourseInfoTile(
+                        image: MediaRes.courseInfoMaterial,
+                        title: '${course.numberOfMaterials.estimate} Materials(s)',
+                        subtitle:
+                        'Access to over ${course.numberOfMaterials} for ${course.title}',
+                        onTap: () => Navigator.of(context)
+                            .pushNamed('unknown-route', arguments: course),
+                      ),
                     ],
-                    if (course.numberOfExams > 0) ...[
-                      Text('Exams: ${course.numberOfExams}'),
-                    ]
-                  ]
+                    ],
+                  if (course.numberOfExams > 0) ...[
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    CourseInfoTile(
+                      image: MediaRes.courseInfoExam,
+                      title: '${course.numberOfExams} Exam(s)',
+                      subtitle:
+                      'Watch our tutorial videos for ${course.title}',
+                      onTap: () => Navigator.of(context)
+                          .pushNamed('unknown-route', arguments: course),
+                    ),
+                  ],
+
                 ],
               )
             ],

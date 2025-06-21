@@ -1,0 +1,13 @@
+{
+  "id": "empty.id",
+  "title" :"empty.title",
+  "thumbnail" : "empty.thumbnail",
+  "videoUrl" : "empty.videoUrl",
+  "tutor" :"empty.tutor",
+  "courseId" :"empty.courseId",
+  "uploadedDate" : {
+    "_seconds": 1677483548,
+    "_nanoseconds": 123456000
+  },
+  "thumbnailIsFile" : false
+}

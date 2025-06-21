@@ -25,6 +25,7 @@ class CourseModel extends Course {
     numberOfExams: 0,
     numberOfMaterials: 0,
     numberOfVideos: 0,
+    imageIsFile: false,
     groupId: '_empty.groupId',
     createdAt: DateTime.now(),
     updatedAt: DateTime.now(),
@@ -82,6 +83,7 @@ class CourseModel extends Course {
     'updatedAt': FieldValue.serverTimestamp(),
     'numberOfVideos': numberOfVideos,
     'numberOfExams': numberOfExams,
+    'imageIsFile':imageIsFile,
     'numberOfMaterials': numberOfMaterials,
   };
 }
