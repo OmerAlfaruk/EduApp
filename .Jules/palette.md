@@ -1,0 +1,3 @@
+## 2025-02-18 - State-Appropriate Tooltips for Accessible Flutter Buttons
+**Learning:** In Flutter, `IconButton` widgets lacking a `tooltip` parameter fail basic accessibility audits as screen readers have no semantic text to announce. When an icon button changes state (e.g., password visibility toggles between show/hide, or profile pic buttons toggle between add/edit), the tooltip must dynamically adapt to reflect the *next action* or *current state* accurately.
+**Action:** Always supply a dynamic, state-appropriate `tooltip` to stateful `IconButton` widgets (like visibility toggles or dynamic action buttons) to ensure screen readers remain perfectly aligned with the visual UI state.
