@@ -1,0 +1,3 @@
+## 2025-01-21 - Standardizing Accessible Icon Buttons with Tooltips in Flutter
+**Learning:** Icon-only buttons like `IconButton` and certain custom or nested interactive widgets in Flutter lack descriptive semantic labels for screen readers by default. Without a `tooltip` or an explicit semantic label, screen reader users cannot easily understand the purpose or state of the button, leading to a poor accessibility experience.
+**Action:** Always specify descriptive, state-appropriate, and context-aware `tooltip` properties on all icon-only `IconButton`s, `PopupMenuButton`s, and navigation buttons to serve as the primary semantic/accessibility label for screen readers.
