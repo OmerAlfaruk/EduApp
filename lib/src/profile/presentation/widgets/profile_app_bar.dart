@@ -28,6 +28,7 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         PopupMenuButton(
           offset: const Offset(0, 50),
+          tooltip: 'Show options',
           icon: Icon(
             Icons.more_horiz,
             color: Colours.neutralTextColour,
