@@ -25,7 +25,7 @@ class NestedBackButton extends StatelessWidget {
             Navigator.of(context).pop();
             }
           },
-
+          tooltip: 'Go back',
           icon: Theme.of(context).platform == TargetPlatform.iOS
               ? const Icon(Icons.arrow_back_ios)
               : const Icon(Icons.arrow_back)),
