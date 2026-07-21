@@ -1,0 +1,3 @@
+## 2024-11-20 - Flutter IconButton Tooltips for Screen Reader Accessibility
+**Learning:** Icon-only buttons (`IconButton`) in Flutter are inherently non-descriptive to screen readers and assistive technologies like TalkBack and VoiceOver unless they specify an explicit `tooltip` attribute. Without a tooltip, screen readers can only announce generic button elements, causing severe friction or dead-ends for visually impaired users.
+**Action:** Always provide a descriptive, localized, and state-appropriate `tooltip` property on every `IconButton` in the application, ensuring interactive states (e.g. password visibility toggles or dynamic image selection) dynamically update their tooltips to reflect current state.
