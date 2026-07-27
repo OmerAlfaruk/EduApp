@@ -1,0 +1,3 @@
+## 2024-11-23 - Screen Reader Accessibility for Icon-only Buttons in Flutter
+**Learning:** Icon-only buttons (such as `IconButton` in Flutter) lack natural text labels. When screen readers process these widgets, they read out generic or unhelpful information if no label is explicitly supplied. Setting the `tooltip` property on an `IconButton` solves this by serving as both a visual tool hint and the primary semantic/accessibility label, allowing the screen reader to announce descriptive and state-appropriate actions.
+**Action:** Always specify a descriptive, state-appropriate `tooltip` property for every `IconButton` or icon-only interactive widget.
