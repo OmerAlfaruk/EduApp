@@ -42,6 +42,7 @@ class _SignInFormState extends State<SignInForm> {
               onPressed: () => setState(() {
                 obscurePassword = !obscurePassword;
               }),
+              tooltip: obscurePassword ? 'Show Password' : 'Hide Password',
               icon: Icon(
                 obscurePassword ? IconlyLight.show : IconlyLight.hide,
                 color: Colors.grey,
