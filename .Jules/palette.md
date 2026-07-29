@@ -1,0 +1,3 @@
+## 2025-02-15 - Providing Semantic Tooltips for Icon-only Interactive Components
+**Learning:** Icon-only buttons (like `IconButton` and custom icon-only controls) lack a text child and can be completely inaccessible/silent to screen readers or unintuitive to sighted users without explicit tooltips. In Flutter, specifying the `tooltip` property acts as both the primary semantic accessibility label for screen readers and displays a helpful description on long-press or hover, enhancing the user experience for everyone.
+**Action:** Always specify a descriptive, state-appropriate, and concise `tooltip` property on all icon-only buttons (e.g., password toggle, search, notification, and navigation/back buttons).
