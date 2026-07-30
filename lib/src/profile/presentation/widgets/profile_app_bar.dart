@@ -32,6 +32,7 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
             Icons.more_horiz,
             color: Colours.neutralTextColour,
           ),
+          tooltip: 'Show menu',
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           itemBuilder: (_) => [
