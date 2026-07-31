@@ -1,0 +1,103 @@
+00:00 +0: loading /app/test/src/course/presentation/bloc/course_cubit_test.dart
+00:00 +0 -1: loading /app/test/src/course/domain/use_cases/course_repo_test.dart [E]
+  Failed to load "/app/test/src/course/domain/use_cases/course_repo_test.dart": Missing definition of `main` method.
+00:00 +0 -1: /app/test/src/course/presentation/bloc/course_cubit_test.dart: initial state should be CourseInitial
+00:00 +1 -1: /app/test/src/course/presentation/bloc/course_cubit_test.dart: AddCourse should emit [AddingCourse,CourseAdded] when successful
+00:00 +2 -1: /app/test/src/course/presentation/bloc/course_cubit_test.dart: AddCourse should emit[CourseLoading,CourseError] when unsuccessful
+00:00 +3 -1: /app/test/src/course/presentation/bloc/course_cubit_test.dart: getCourses should emit [CourseLoading,CourseLoaded] when successful
+00:00 +4 -1: /app/test/src/course/presentation/bloc/course_cubit_test.dart: getCourses should emit [CourseLoading,CourseError] when unsuccessful
+00:00 +5 -1: /app/test/src/course/domain/use_cases/add_course_use_case_test.dart: should call addCourse on the repository
+00:01 +6 -1: /app/test/src/course/domain/use_cases/get_courses_usecase_test.dart: should get courses from the repo
+00:01 +7 -1: /app/test/src/course/data/data_sources/course_remote_data_src_test.dart: addCourse should add the given course to the firestore collection
+00:01 +8 -1: /app/test/src/course/data/data_sources/course_remote_data_src_test.dart: getCourses should return a List<Course> when the call is successful
+00:02 +9 -1: /app/test/src/course/data/models/course_model_test.dart: should be a subclass of [Course] entity
+00:02 +10 -1: /app/test/src/course/data/models/course_model_test.dart: empty should return a [CourseModel] with empty data
+00:02 +11 -1: /app/test/src/course/data/models/course_model_test.dart: fromMap should return a [CourseModel] with the correct data
+00:02 +12 -1: /app/test/src/course/data/models/course_model_test.dart: toMap should return a [Map] with the proper data
+00:02 +13 -1: /app/test/src/course/data/models/course_model_test.dart: copyWith should return a [CourseModel] with the new data
+00:02 +14 -1: /app/test/src/course/data/repositories/course_repo_impl_test.dart: AddCourse Should complete successfully when call to remote source is successful
+00:02 +15 -1: /app/test/src/course/data/repositories/course_repo_impl_test.dart: AddCourse Should Return [ServerFailure] when Call to Remote Data source is unsuccessful
+00:02 +16 -1: /app/test/src/course/data/repositories/course_repo_impl_test.dart: GetCourses should return [List<Course>] when call to remote source is successful
+00:02 +17 -1: /app/test/src/course/data/repositories/course_repo_impl_test.dart: GetCourses Should Return [ServerFailure] when Call to Remote Data source is unsuccessful
+00:03 +18 -1: /app/test/src/course/features/videos/presentation/bloc/video_cubit_test.dart: Initial State should be [VideoInitial]
+00:03 +19 -1: /app/test/src/course/features/videos/presentation/bloc/video_cubit_test.dart: AddVideo should emit [VideoAdding,VideoAdded] when successful
+00:03 +20 -1: /app/test/src/course/features/videos/presentation/bloc/video_cubit_test.dart: AddVideo should emit [VideoAdding,VideoError] when unsuccessful
+00:03 +21 -1: /app/test/src/course/features/videos/presentation/bloc/video_cubit_test.dart: getVideos should emit [VideoLoading,VideoLoaded] when successful
+00:03 +22 -1: /app/test/src/course/features/videos/presentation/bloc/video_cubit_test.dart: getVideos should emit [VideoLoading,VideoError] when unsuccessful
+00:03 +23 -1: /app/test/src/course/features/videos/domain/usecases/add_videos_test.dart: should add video.json successfully
+00:04 +24 -1: /app/test/src/course/features/videos/domain/usecases/get_videos_test.dart: should return call [repo.getVideos]
+00:04 +25 -1: /app/test/src/course/features/videos/data/repository/video_repository_test.dart: AddVideo Should complete successfully when call to remote source is successful
+00:04 +26 -1: /app/test/src/course/features/videos/data/repository/video_repository_test.dart: AddVideo Should Return [ServerFailure] when Call to Remote Data source is unsuccessful
+00:04 +27 -1: /app/test/src/course/features/videos/data/repository/video_repository_test.dart: GetVideos should return [List<Video>] when call to remote source is successful
+00:04 +28 -1: /app/test/src/course/features/videos/data/repository/video_repository_test.dart: GetVideos should return [ServerFailure] when call to remote source is unsuccessful
+00:05 +29 -1: /app/test/src/course/features/videos/data/source/video_remote_data_impl_test.dart: addVideo should add the provided video to the firestore
+00:05 +30 -1: /app/test/src/course/features/videos/data/source/video_remote_data_impl_test.dart: addVideo should throw ServerException if user is not authenticated
+00:05 +31 -1: /app/test/src/course/features/videos/data/source/video_remote_data_impl_test.dart: addVideo should add the provided thumbnail to the storage if its file
+00:05 +32 -1: /app/test/src/course/features/videos/data/source/video_remote_data_impl_test.dart: getVideos should return a list of videos for the given course
+00:05 +33 -1: /app/test/src/course/features/videos/data/source/video_remote_data_impl_test.dart: getVideos should return an empty list if no videos exist for the course
+00:05 +34 -1: /app/test/src/course/features/videos/data/source/video_remote_data_impl_test.dart: getVideos with unauthenticated user should throw ServerException if user is not authenticated
+00:06 +35 -1: /app/test/src/course/features/videos/data/model/video_model_test.dart: should be a subclass of [Course] entity
+00:06 +36 -1: /app/test/src/course/features/videos/data/model/video_model_test.dart: empty should return a [VideoModel] with empty data
+00:06 +37 -1: /app/test/src/course/features/videos/data/model/video_model_test.dart: fromMap should return a [VideoModel] with the correct data
+00:06 +38 -1: /app/test/src/course/features/videos/data/model/video_model_test.dart: toMap should return a [Map] with the proper data
+00:06 +39 -1: /app/test/src/on_boarding/presentation/cubit/on_boarding_cubit_test.dart: initial state should be [OnBoardingInitial]
+00:06 +40 -1: /app/test/src/on_boarding/presentation/cubit/on_boarding_cubit_test.dart: cacheFirstTimer should emit [CachingFirstTimer, UserCached] when successful
+00:06 +41 -1: /app/test/src/on_boarding/presentation/cubit/on_boarding_cubit_test.dart: cacheFirstTimer should emit [CachingFirstTimer, OnBoardingError] when unsuccessful
+00:06 +42 -1: /app/test/src/on_boarding/presentation/cubit/on_boarding_cubit_test.dart: checkIfUserIsFirstTimer should emit [CheckingIfUserIsFirstTimer, OnBoardingStatus] when successful
+00:06 +43 -1: /app/test/src/on_boarding/presentation/cubit/on_boarding_cubit_test.dart: checkIfUserIsFirstTimer should emit [CheckingIfUserIsFirstTImer, OnBoardingState(true)] when unsuccessful
+00:07 +44 -1: /app/test/src/on_boarding/domain/usecases/check_if_user_is_first_timer_test.dart: should get a response from the [MockOnBoardingRepo]
+00:07 +45 -1: /app/test/src/on_boarding/domain/usecases/cache_first_timer_test.dart: should call the [OnBoardingRepo.cacheFirstTimer] and return the right data
+00:08 +46 -1: /app/test/src/on_boarding/data/repos/on_boarding_repo_impl_test.dart: should be a subclass of [OnBoardingRepo]
+00:08 +47 -1: /app/test/src/on_boarding/data/repos/on_boarding_repo_impl_test.dart: cacheFirstTimer should complete successfully when call to local source is successful
+00:08 +48 -1: /app/test/src/on_boarding/data/repos/on_boarding_repo_impl_test.dart: cacheFirstTimer should return [CacheFailure] when call to local source is unsuccessful
+00:08 +49 -1: /app/test/src/on_boarding/data/repos/on_boarding_repo_impl_test.dart: checkIfUserIsFirstTimer should return true when user is first timer
+00:08 +50 -1: /app/test/src/on_boarding/data/repos/on_boarding_repo_impl_test.dart: checkIfUserIsFirstTimer should return false when user is not first timer
+00:08 +51 -1: /app/test/src/on_boarding/data/repos/on_boarding_repo_impl_test.dart: checkIfUserIsFirstTimer should return a CacheFailure when call to local data source is unsuccessful
+00:08 +52 -1: /app/test/src/on_boarding/data/datasources/on_boarding_local_data_source_test.dart: cacheFirstTimer should call [SharedPreferences] to cache the data
+00:09 +53 -1: /app/test/src/on_boarding/data/datasources/on_boarding_local_data_source_test.dart: cacheFirstTimer should throw a [CacheException] when there is an error caching the data
+00:09 +54 -1: /app/test/src/on_boarding/data/datasources/on_boarding_local_data_source_test.dart: checkIfUserIsFirstTimer should call [SharedPreferences] to check if user is first timer and return the right response from storage when data exists
+00:09 +55 -1: /app/test/src/on_boarding/data/datasources/on_boarding_local_data_source_test.dart: checkIfUserIsFirstTimer should return true if there is no data in storage
+00:09 +56 -1: /app/test/src/on_boarding/data/datasources/on_boarding_local_data_source_test.dart: checkIfUserIsFirstTimer should throw a [CacheException] when there is an error retrieving the data
+00:09 +57 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: (setUpAll)
+00:09 +57 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: initialState should be [AuthInitial]
+00:09 +58 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: SignInEvent should emit [AuthLoading, SignedIn] when signIn succeeds
+00:09 +59 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: SignInEvent should emit [AuthLoading, AuthError] when signIn fails
+00:09 +60 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: SignUpEvent should emit [AuthLoading, SignedUp] when SignUpEvent is added and SignUp succeeds
+00:09 +61 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: SignUpEvent should emit [AuthLoading, AuthError] when SignUpEvent is added and SignUp fails
+00:09 +62 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: ForgotPasswordEvent should emit [AuthLoading, ForgotPasswordSent] when ForgotPasswordEvent is added and ForgotPassword succeeds
+00:09 +63 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: ForgotPasswordEvent should emit [AuthLoading, AuthError] when ForgotPasswordEvent is added and ForgotPassword fails
+00:09 +64 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: UpdateUserEvent should emit [AuthLoading, UserUpdated] when UpdateUserEvent is added and UpdateUser succeeds
+00:09 +65 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: UpdateUserEvent should emit [AuthLoading, AuthError] when UpdateUserEvent is added and UpdateUser fails
+00:09 +66 -1: /app/test/src/auth/presentation/bloc/auth_bloc_test.dart: (tearDownAll)
+00:09 +66 -1: /app/test/src/auth/domain/usecases/forgot_password_test.dart: should call the [AuthRepo.forgotPassword]
+00:10 +67 -1: /app/test/src/auth/domain/usecases/sign_in_test.dart: should return [LocalUser] from the [AuthRepo]
+00:11 +68 -1: /app/test/src/auth/domain/usecases/update_user_test.dart: should call the [AuthRepo]
+00:11 +69 -1: /app/test/src/auth/domain/usecases/sign_up_test.dart: should call the [AuthRepo]
+00:12 +70 -1: /app/test/src/auth/data/repos/auth_repo_impl_test.dart: forgotPassword should return [void] when call to remote source is successful
+00:12 +71 -1: /app/test/src/auth/data/repos/auth_repo_impl_test.dart: forgotPassword should return [ServerFailure] when call to remote source is unsuccessful
+00:12 +72 -1: /app/test/src/auth/data/repos/auth_repo_impl_test.dart: signIn should return [LocalUser] when call to remote source is successful
+00:12 +73 -1: /app/test/src/auth/data/repos/auth_repo_impl_test.dart: signIn should return [ServerFailure] when call to remote source is unsuccessful
+00:12 +74 -1: /app/test/src/auth/data/repos/auth_repo_impl_test.dart: signUp should return [void] when call to remote source is successful
+00:12 +75 -1: /app/test/src/auth/data/repos/auth_repo_impl_test.dart: signUp should return [ServerFailure] when call to remote source is unsuccessful
+00:12 +76 -1: /app/test/src/auth/data/repos/auth_repo_impl_test.dart: updateUser should return [void] when call to remote source is successful
+00:12 +77 -1: /app/test/src/auth/data/repos/auth_repo_impl_test.dart: updateUser should return [ServerFailure] when call to remote source is unsuccessful
+00:12 +78 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: (setUpAll)
+00:12 +78 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: forgotPassword should complete successfully when no [Exception] is thrown
+00:12 +79 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: forgotPassword should throw [ServerException] when [FirebaseAuthException] is thrown
+00:12 +80 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: signIn should return [LocalUserModel] when no [Exception] is thrown
+00:13 +81 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: signIn should throw [ServerException] when user is null after signing in
+00:13 +82 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: signIn should throw [ServerException] when [FirebaseAuthException] is thrown
+00:13 +83 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: signUp should complete successfully when no [Exception] is thrown
+00:13 +84 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: signUp should throw [ServerException] when [FirebaseAuthException] is thrown
+00:13 +85 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: updateUser should update user displayName successfully when no [Exception] is thrown
+00:13 +86 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: updateUser should update user email successfully when no [Exception] is thrown
+00:13 +87 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: updateUser should update user bio successfully when no [Exception] is thrown
+00:13 +88 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: updateUser should update user password successfully when no [Exception] is thrown
+00:13 +89 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: updateUser should update user profilePic successfully when no [Exception] is thrown
+00:13 +90 -1: /app/test/src/auth/data/datasources/auth_remote_data_source_test.dart: (tearDownAll)
+00:13 +90 -1: /app/test/src/auth/data/models/user_model_test.dart: should be a subclass of [LocalUser] entity
+00:13 +91 -1: /app/test/src/auth/data/models/user_model_test.dart: fromMap should return a valid [LocalUserModel] from the map
+00:13 +92 -1: /app/test/src/auth/data/models/user_model_test.dart: fromMap should throw an [Error] when the map is invalid
+00:13 +93 -1: /app/test/src/auth/data/models/user_model_test.dart: toMap should return a valid [DataMap] from the model
+00:13 +94 -1: /app/test/src/auth/data/models/user_model_test.dart: copyWith should return a valid [LocalUserModel] with updated values
+00:13 +95 -1: Some tests failed.
