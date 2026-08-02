@@ -122,7 +122,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                         userData: emailController.text.trim()));
                   }
                   if (passwordChanged) {
-                    if (oldPasswordController.text.isNotEmpty) {
+                    if (oldPasswordController.text.isEmpty) {
                       CoreUtils.showSnackBar(
                           context, "Please enter your old password");
                       return;
@@ -205,6 +205,10 @@ class _EditProfileViewState extends State<EditProfileView> {
                                 onPressed: () {
                                   pickImage();
                                 },
+                                tooltip: (pickedImage != null ||
+                                        user!.profilePic != null)
+                                    ? 'Change profile picture'
+                                    : 'Add profile picture',
                                 icon: Icon(
                                   (pickedImage != null ||
                                           user!.profilePic != null)

@@ -1,0 +1,3 @@
+## 2024-11-20 - Password Fields Obscuring & Validation UX
+**Learning:** Obscuring password fields in forms (like edit profile) is essential for privacy and security. Providing toggles with accessibility tooltips on these icon-only buttons drastically improves screen reader experiences and satisfies standard accessibility requirements. Furthermore, backward logical checks (such as requiring an old password field to be empty instead of filled) severely disrupt crucial user flows, so verification of inverse form logic is critical.
+**Action:** Always make sure password fields are obscured with accessible, state-appropriate visibility toggles. Thoroughly verify form logic checks to ensure they don't block users from expected features.
