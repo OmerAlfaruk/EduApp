@@ -36,19 +36,20 @@ class EditProfileForm extends StatelessWidget {
             controller: bioController,
             hintText: context.currentUser!.bio ?? 'Bio'),
         EditProfileFormField(
-            fieldTitle: 'CURRENT PASSWORD',
-            controller: oldPasswordController,
-            hintText: '*******',
-
+          fieldTitle: 'CURRENT PASSWORD',
+          controller: oldPasswordController,
+          hintText: '*******',
+          isPassword: true,
         ),
         StatefulBuilder(
-          builder: (__,setState) {
-            oldPasswordController.addListener(()=>setState((){}));
+          builder: (__, setState) {
+            oldPasswordController.addListener(() => setState(() {}));
             return EditProfileFormField(
-                fieldTitle: 'NEW PASSWORD',
-                controller: passwordController,
-                hintText: "New Password",
+              fieldTitle: 'NEW PASSWORD',
+              controller: passwordController,
+              hintText: "New Password",
               readOnly: oldPasswordController.text.isEmpty,
+              isPassword: true,
             );
           }
         ),
