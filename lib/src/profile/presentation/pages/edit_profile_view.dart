@@ -122,7 +122,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                         userData: emailController.text.trim()));
                   }
                   if (passwordChanged) {
-                    if (oldPasswordController.text.isNotEmpty) {
+                    if (oldPasswordController.text.isEmpty) {
                       CoreUtils.showSnackBar(
                           context, "Please enter your old password");
                       return;
@@ -142,7 +142,14 @@ class _EditProfileViewState extends State<EditProfileView> {
                   }
                 },
                 child: state is AuthLoading
-                    ? const CircularProgressIndicator()
+                    ? const SizedBox(
+                        width: 20,
+                        height: 20,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2,
+                          color: Colors.white,
+                        ),
+                      )
                     : StatefulBuilder(builder: (__, refresh) {
                         fullNameController.addListener(() => refresh(() {}));
                         bioController.addListener(() => refresh(() {}));
@@ -157,7 +164,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                               fontWeight: FontWeight.w500,
                               color: nothingChanged
                                   ? Colors.grey
-                                  : Colors.blueAccent),
+                                  : Colors.white),
                         );
                       }),
               )
@@ -205,6 +212,10 @@ class _EditProfileViewState extends State<EditProfileView> {
                                 onPressed: () {
                                   pickImage();
                                 },
+                                tooltip: (pickedImage != null ||
+                                        (user!.profilePic != null && user.profilePic!.isNotEmpty))
+                                    ? 'Change profile picture'
+                                    : 'Add profile picture',
                                 icon: Icon(
                                   (pickedImage != null ||
                                           user!.profilePic != null)

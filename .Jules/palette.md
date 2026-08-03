@@ -1,0 +1,3 @@
+## 2025-01-25 - Icon Tooltips and Secure Password Visibility in Edit Profile
+**Learning:** Icon-only buttons (such as the profile image picker) lacking a descriptive `tooltip` property violate critical accessibility patterns because screen readers cannot interpret their purpose. Additionally, entering sensitive data like current or new passwords in plaintext without obscure/toggle capabilities represents a severe UX/security concern.
+**Action:** Always specify a state-appropriate `tooltip` property on all icon-only buttons to serve as semantic labels. For password fields, ensure that secure input is maintained using `obscureText` with a clear visibility toggle.
