@@ -55,6 +55,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   obscurePassword = !obscurePassword;
                 });
               },
+              tooltip: obscurePassword ? 'Show password' : 'Hide password',
               icon: Icon(
                 obscurePassword ? IconlyLight.show : IconlyLight.hide,
                 color: Colors.grey,
@@ -73,6 +74,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   obscureConfirmPassword = !obscureConfirmPassword;
                 });
               },
+              tooltip: obscureConfirmPassword ? 'Show password' : 'Hide password',
               icon: Icon(
                 obscureConfirmPassword ? IconlyLight.show : IconlyLight.hide,
                 color: Colors.grey,
