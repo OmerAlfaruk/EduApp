@@ -1,0 +1,3 @@
+## 2024-12-16 - Flutter IconButton Accessibility with State-Appropriate Tooltips
+**Learning:** In Flutter applications, screen readers (TalkBack/VoiceOver) rely on the `tooltip` property of icon-only buttons (like `IconButton`) as their main accessibility / semantic label. Adding descriptive, state-appropriate tooltips ensures the app is fully accessible for visually impaired users without adding intrusive visual clutter for other users.
+**Action:** Always provide descriptive, context-specific, and state-appropriate `tooltip` properties for all `IconButton` components to maintain an accessible, high-delight user experience.
