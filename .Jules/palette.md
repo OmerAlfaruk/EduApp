@@ -1,0 +1,3 @@
+## 2024-12-14 - Accessible Icon-Only Buttons in Flutter
+**Learning:** Standard Flutter `IconButton` widgets without `tooltip` attributes render as unlabelled buttons for screen readers (TalkBack/VoiceOver), causing severe accessibility barriers. Providing a dynamic, state-appropriate `tooltip` automatically serves as the primary accessibility/semantic label for assistive technologies, while simultaneously enhancing the hover state experience for desktop and web users.
+**Action:** Always specify a descriptive, state-appropriate `tooltip` property on icon-only interactive components (`IconButton`) to ensure universal accessibility and clean hover-state hints.
