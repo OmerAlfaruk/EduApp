@@ -1,0 +1,3 @@
+## 2025-01-13 - Flutter Screen-Reader Accessibility with Tooltips
+**Learning:** In Flutter, icon-only buttons like `IconButton` should always specify a descriptive, state-appropriate `tooltip` property, which serves as the primary semantic/accessibility label for screen readers. In forms (like sign in/up), dynamic tooltips that change state based on password obfuscation enhance both usability (giving clear feedback) and accessibility.
+**Action:** Ensure all standard and custom interactive icon-only elements across screens and reusable widgets define the `tooltip` property to maintain uniform accessibility.

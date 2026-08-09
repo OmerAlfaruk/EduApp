@@ -1,30 +1,36 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
+import 'package:education_app/src/auth/presentation/widgets/sign_in_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:education_app/main.dart';
-
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('SignInForm password visibility toggle has accessible tooltip', (WidgetTester tester) async {
+    final emailController = TextEditingController();
+    final passwordController = TextEditingController();
+    final formKey = GlobalKey<FormState>();
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: SignInForm(
+            emailController: emailController,
+            passwordController: passwordController,
+            formKey: formKey,
+          ),
+        ),
+      ),
+    );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    // Find the IconButton by tooltip 'Show password'
+    final showPasswordFinder = find.byTooltip('Show password');
+    expect(showPasswordFinder, findsOneWidget);
+
+    // Tap to toggle visibility
+    await tester.tap(showPasswordFinder);
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // The tooltip should now be 'Hide password'
+    final hidePasswordFinder = find.byTooltip('Hide password');
+    expect(hidePasswordFinder, findsOneWidget);
+    expect(find.byTooltip('Show password'), findsNothing);
   });
 }
