@@ -16,7 +16,13 @@ class AllCoursesView extends StatelessWidget {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         leading: const NestedBackButton(),
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search),
+            tooltip: 'Search subjects',
+          ),
+        ],
       ),
       body: GradientBackground(
         image: MediaRes.homeGradientBackground,

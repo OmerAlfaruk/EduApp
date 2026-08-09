@@ -59,6 +59,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 obscurePassword ? IconlyLight.show : IconlyLight.hide,
                 color: Colors.grey,
               ),
+              tooltip: obscurePassword ? 'Show password' : 'Hide password',
             ),
           ),
           const SizedBox(height: 25),
@@ -77,6 +78,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 obscureConfirmPassword ? IconlyLight.show : IconlyLight.hide,
                 color: Colors.grey,
               ),
+              tooltip: obscureConfirmPassword ? 'Show confirm password' : 'Hide confirm password',
             ),
             overrideValidator: true,
             validator: (value) {

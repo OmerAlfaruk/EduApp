@@ -120,6 +120,7 @@ class _AddCourseSheetState extends State<AddCourseSheet> {
                           imageController.text = imageName;
                         }
                       },
+                      tooltip: 'Select course image from gallery',
                     ),
                   ),
                   const SizedBox(height: 20),
