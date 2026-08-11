@@ -14,10 +14,12 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           onPressed: () {},
+          tooltip: 'Search',
           icon: const Icon(Icons.search),
         ),
         IconButton(
           onPressed: () {},
+          tooltip: 'Notifications',
           icon: const Icon(Icons.notifications),
         ),
         Consumer<UserProvider>(builder: (_, provider, __) {
