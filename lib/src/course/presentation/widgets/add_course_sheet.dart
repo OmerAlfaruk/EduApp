@@ -108,6 +108,7 @@ class _AddCourseSheetState extends State<AddCourseSheet> {
                       fontSize: 12,
                     ),
                     suffixIcon: IconButton(
+                      tooltip: 'Select course image',
                       icon: const Icon(Icons.add_photo_alternate_outlined),
                       onPressed: () async {
                         final image = await CoreUtils.pickImage();
