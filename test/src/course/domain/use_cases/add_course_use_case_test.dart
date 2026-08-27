@@ -1,11 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:education_app/src/course/domain/entities/course.dart';
-import 'package:education_app/src/course/domain/repositories/course_repo.dart';
 import 'package:education_app/src/course/domain/use_cases/add_course_use_case.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import 'course_repo_test.dart';
+import 'course_repo.mock.dart';
 
 
 
