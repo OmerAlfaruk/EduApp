@@ -5,7 +5,7 @@ import 'package:education_app/src/course/domain/use_cases/add_course_use_case.da
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import 'course_repo_test.dart';
+import 'course_repo.mock.dart';
 
 
 
