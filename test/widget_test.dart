@@ -1,30 +1,54 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
+import 'package:education_app/core/common/app/providers/user_provider.dart';
+import 'package:education_app/core/common/views/nested_back_button.dart';
+import 'package:education_app/src/home/presentation/widgets/home_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:education_app/main.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('NestedBackButton renders IconButton with tooltip "Back"',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(kToolbarHeight),
+            child: NestedBackButton(),
+          ),
+        ),
+      ),
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    final iconButtonFinder = find.byType(IconButton);
+    expect(iconButtonFinder, findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    final iconButton = tester.widget<IconButton>(iconButtonFinder);
+    expect(iconButton.tooltip, 'Back');
+  });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  testWidgets('HomeAppBar renders IconButtons with proper tooltips',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+      ChangeNotifierProvider(
+        create: (_) => UserProvider(),
+        child: const MaterialApp(
+          home: Scaffold(
+            appBar: HomeAppBar(),
+          ),
+        ),
+      ),
+    );
+
+    final searchButtonFinder = find.widgetWithIcon(IconButton, Icons.search);
+    expect(searchButtonFinder, findsOneWidget);
+    final searchButton = tester.widget<IconButton>(searchButtonFinder);
+    expect(searchButton.tooltip, 'Search');
+
+    final notificationButtonFinder =
+        find.widgetWithIcon(IconButton, Icons.notifications);
+    expect(notificationButtonFinder, findsOneWidget);
+    final notificationButton =
+        tester.widget<IconButton>(notificationButtonFinder);
+    expect(notificationButton.tooltip, 'Notifications');
   });
 }
