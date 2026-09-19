@@ -205,9 +205,13 @@ class _EditProfileViewState extends State<EditProfileView> {
                                 onPressed: () {
                                   pickImage();
                                 },
+                                tooltip: (pickedImage != null ||
+                                        user?.profilePic != null)
+                                    ? 'Edit profile picture'
+                                    : 'Add profile picture',
                                 icon: Icon(
                                   (pickedImage != null ||
-                                          user!.profilePic != null)
+                                          user?.profilePic != null)
                                       ? Icons.edit
                                       : Icons.add_a_photo,
 
