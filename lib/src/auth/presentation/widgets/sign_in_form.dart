@@ -39,6 +39,7 @@ class _SignInFormState extends State<SignInForm> {
             obscureText: obscurePassword,
             keyboardType: TextInputType.visiblePassword,
             suffixIcon: IconButton(
+              tooltip: obscurePassword ? 'Show password' : 'Hide password',
               onPressed: () => setState(() {
                 obscurePassword = !obscurePassword;
               }),
