@@ -202,6 +202,7 @@ class _EditProfileViewState extends State<EditProfileView> {
 
 
                             child: IconButton(
+                                tooltip: 'Change profile picture',
                                 onPressed: () {
                                   pickImage();
                                 },
