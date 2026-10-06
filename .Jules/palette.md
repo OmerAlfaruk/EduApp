@@ -1,0 +1,3 @@
+## 2025-02-18 - Tooltips as Primary Semantics for Icon-Only Buttons
+**Learning:** In Flutter, icon-only `IconButton` widgets without explicit `tooltip` or `Semantics` tags are unannounced or poorly described by screen readers (like TalkBack and VoiceOver) and lack hover/long-press hints on desktop and web. Adding dynamic, state-appropriate tooltips (e.g., toggling between 'Show password' and 'Hide password' or dynamic action descriptions) simultaneously enhances accessibility for visually impaired users and overall user discovery.
+**Action:** Always provide explicit, state-aware `tooltip` parameters on all icon-only `IconButton` widgets across forms, app bars, and navigation controls.
