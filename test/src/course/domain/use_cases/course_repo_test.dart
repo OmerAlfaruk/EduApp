@@ -3,3 +3,5 @@ import 'package:mocktail/mocktail.dart';
 
 class MockCourseRepository extends Mock implements CourseRepo {
 }
+
+void main() {}
