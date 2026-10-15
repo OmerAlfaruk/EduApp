@@ -50,6 +50,7 @@ dependencies:
 
   #video_thumbnail: ^0.5.3
 dependency_overrides:
+  intl: ^0.20.2
   firebase_core_platform_interface: ^5.0.0
   firebase_auth_platform_interface: ^7.0.9
   cloud_firestore_platform_interface: ^6.0.0
