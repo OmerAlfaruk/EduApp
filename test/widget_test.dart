@@ -1,30 +1,42 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
+import 'package:education_app/core/common/app/providers/user_provider.dart';
+import 'package:education_app/core/common/views/nested_back_button.dart';
+import 'package:education_app/src/home/presentation/widgets/home_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:education_app/main.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('NestedBackButton renders IconButton with Back tooltip', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            leading: const NestedBackButton(),
+          ),
+        ),
+      ),
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    final backButtonFinder = find.byType(IconButton);
+    expect(backButtonFinder, findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    final iconButton = tester.widget<IconButton>(backButtonFinder);
+    expect(iconButton.tooltip, equals('Back'));
+  });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  testWidgets('HomeAppBar renders Search and Notifications tooltips', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: ChangeNotifierProvider(
+          create: (_) => UserProvider(),
+          child: const Scaffold(
+            appBar: HomeAppBar(),
+          ),
+        ),
+      ),
+    );
+
+    expect(find.byTooltip('Search'), findsOneWidget);
+    expect(find.byTooltip('Notifications'), findsOneWidget);
   });
 }
