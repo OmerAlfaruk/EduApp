@@ -1,0 +1,3 @@
+## 2026-10-31 - Flutter IconButton Tooltips for Screen Reader Semantics
+**Learning:** In Flutter, icon-only buttons such as `IconButton` lack intrinsic text labels. Without setting the `tooltip` property, screen readers (TalkBack / VoiceOver) cannot announce their purpose or state, and desktop/web pointer users receive no visual feedback on hover. For toggle buttons like password obscuration, providing dynamic, state-appropriate tooltips (e.g. 'Show password' vs 'Hide password') is essential for both accessibility semantics and user guidance.
+**Action:** Always provide state-appropriate `tooltip` values on `IconButton` widgets in Flutter forms and toolbars to ensure accessibility announcements and assistive clarity.
