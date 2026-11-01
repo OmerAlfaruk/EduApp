@@ -1,0 +1,3 @@
+## 2026-02-18 - Tooltip Accessibility for Password Visibility Toggles
+**Learning:** In Flutter, `IconButton` widgets used as suffix icons (such as password visibility toggles in text fields) have no accessible name by default. Screen readers announce only "button" without indicating purpose or current state. Adding dynamic `tooltip` properties (e.g. `obscurePassword ? 'Show password' : 'Hide password'`) gives TalkBack/VoiceOver a state-accurate accessible label while also serving as a desktop/web hover tooltip.
+**Action:** When adding or updating icon-only buttons like password toggles or action buttons in Flutter, always provide a dynamic or descriptive `tooltip` attribute.
