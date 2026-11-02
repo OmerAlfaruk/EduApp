@@ -46,6 +46,7 @@ class _SignInFormState extends State<SignInForm> {
                 obscurePassword ? IconlyLight.show : IconlyLight.hide,
                 color: Colors.grey,
               ),
+              tooltip: obscurePassword ? 'Show password' : 'Hide password',
             ),
           ),
         ],
