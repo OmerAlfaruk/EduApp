@@ -50,6 +50,7 @@ class _SignUpFormState extends State<SignUpForm> {
             obscureText: obscurePassword,
             keyboardType: TextInputType.visiblePassword,
             suffixIcon: IconButton(
+              tooltip: obscurePassword ? 'Show password' : 'Hide password',
               onPressed: () {
                 setState(() {
                   obscurePassword = !obscurePassword;
@@ -68,6 +69,9 @@ class _SignUpFormState extends State<SignUpForm> {
             obscureText: obscureConfirmPassword,
             keyboardType: TextInputType.visiblePassword,
             suffixIcon: IconButton(
+              tooltip: obscureConfirmPassword
+                  ? 'Show confirm password'
+                  : 'Hide confirm password',
               onPressed: () {
                 setState(() {
                   obscureConfirmPassword = !obscureConfirmPassword;
