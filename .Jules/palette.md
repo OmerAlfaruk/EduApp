@@ -1,0 +1,3 @@
+## 2026-03-02 - State-dependent Tooltips on Password Visibility Toggles
+**Learning:** In Flutter, icon-only toggle buttons like password visibility toggles (`IconButton`) lack accessible descriptions by default. Supplying a static tooltip is insufficient because the button's action shifts between revealing and hiding sensitive text. A dynamic tooltip condition (`obscurePassword ? 'Show password' : 'Hide password'`) provides clear semantic labels for screen readers and long-press tooltips that adapt with component state.
+**Action:** When creating or auditing toggle buttons in Flutter form fields, always ensure the `tooltip` property dynamically reflects the next state or action rather than a generic or static label.
