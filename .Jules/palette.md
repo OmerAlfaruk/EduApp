@@ -1,0 +1,3 @@
+## 2026-11-07 - Dynamic accessibility tooltips for stateful toggle icon buttons
+**Learning:** In Flutter applications, `IconButton` widgets without a `tooltip` attribute lack accessible labels for assistive technologies such as TalkBack and VoiceOver. For stateful toggle buttons (like password obfuscation toggles), the tooltip should dynamically reflect the action that will take place upon activation (e.g. "Show password" vs. "Hide password") to ensure clarity for screen reader users.
+**Action:** When creating or inspecting `IconButton` components—especially stateful or icon-only controls—always provide a dynamic, state-appropriate `tooltip` string.
